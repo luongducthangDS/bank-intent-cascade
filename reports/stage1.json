@@ -1,0 +1,40 @@
+{
+  "tfidf_lr": {
+    "val": {
+      "accuracy": 0.8774,
+      "macro_f1": 0.8747,
+      "ece": 0.164,
+      "top5_recall": 0.982
+    },
+    "test": {
+      "accuracy": 0.8857,
+      "macro_f1": 0.886,
+      "ece": 0.1645,
+      "top5_recall": 0.9831
+    },
+    "latency_ms": {
+      "p50": 0.65,
+      "p95": 1.14
+    },
+    "fit_seconds": 4.8
+  },
+  "embedding_lr": {
+    "val": {
+      "accuracy": 0.93,
+      "macro_f1": 0.9307,
+      "ece": 0.0776,
+      "top5_recall": 0.9947
+    },
+    "test": {
+      "accuracy": 0.9318,
+      "macro_f1": 0.9316,
+      "ece": 0.0758,
+      "top5_recall": 0.9925
+    },
+    "latency_ms": {
+      "p50": 28.18,
+      "p95": 37.32
+    },
+    "fit_seconds": 78.6
+  }
+}

@@ -1,0 +1,13 @@
+# torch CPU wheel: pip install torch --index-url https://download.pytorch.org/whl/cpu
+sentence-transformers>=3.0
+scikit-learn>=1.5
+numpy
+pandas
+matplotlib
+fastapi
+uvicorn[standard]
+httpx
+pytest
+huggingface_hub
+joblib
+# local LLM (CPU wheel): pip install llama-cpp-python --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu

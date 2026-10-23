@@ -1,0 +1,238 @@
+{
+  "llm": "qwen2.5-3b-instruct-q4_k_m_s3_k5",
+  "llm_cap": 0.5,
+  "llm_stats_test": {
+    "calls_measured": 232,
+    "latency_ms_p50": 8996,
+    "latency_ms_p95": 17310,
+    "prompt_tokens_mean": 387,
+    "accuracy_on_its_band": 0.5948,
+    "classifier_accuracy_on_same_band": 0.5647
+  },
+  "policies_test": {
+    "tfidf_only": {
+      "auto_rate": 1.0,
+      "human_rate": 0.0,
+      "llm_rate": 0.0,
+      "automated_accuracy": 0.8857,
+      "errors_per_1k": 114.3,
+      "errors_per_1k_ci95": [
+        102.9,
+        125.3
+      ],
+      "mean_latency_ms": 28.2,
+      "llm_prompt_tokens_per_1k_msgs": 0
+    },
+    "embedding_only": {
+      "auto_rate": 1.0,
+      "human_rate": 0.0,
+      "llm_rate": 0.0,
+      "automated_accuracy": 0.9318,
+      "errors_per_1k": 68.2,
+      "errors_per_1k_ci95": [
+        59.4,
+        77.3
+      ],
+      "mean_latency_ms": 28.2,
+      "llm_prompt_tokens_per_1k_msgs": 0
+    },
+    "classifier+human@5%": {
+      "t_auto": 0.4,
+      "t_llm": 0.4,
+      "auto_rate": 0.9588,
+      "llm_rate": 0.0,
+      "human_rate": 0.0412,
+      "automated_accuracy": 0.9502,
+      "end_to_end_accuracy": 0.9523,
+      "errors_per_1k": 47.7273,
+      "errors_per_1k_ci95": [
+        40.6,
+        54.9
+      ],
+      "tuned_on_val": {
+        "t_auto": 0.4,
+        "t_llm": 0.4,
+        "auto_rate": 0.9514,
+        "llm_rate": 0.0,
+        "human_rate": 0.0486,
+        "automated_accuracy": 0.9566,
+        "end_to_end_accuracy": 0.9587,
+        "errors_per_1k": 41.3058
+      },
+      "mean_latency_ms": 28.2,
+      "llm_prompt_tokens_per_1k_msgs": 0
+    },
+    "cascade_rerank@5%": {
+      "t_auto": 0.42,
+      "t_llm": 0.4,
+      "auto_rate": 0.9532,
+      "llm_rate": 0.0055,
+      "human_rate": 0.0412,
+      "automated_accuracy": 0.9499,
+      "end_to_end_accuracy": 0.9519,
+      "errors_per_1k": 48.0519,
+      "errors_per_1k_ci95": [
+        40.7,
+        55.5
+      ],
+      "tuned_on_val": {
+        "t_auto": 0.42,
+        "t_llm": 0.4,
+        "auto_rate": 0.9454,
+        "llm_rate": 0.006,
+        "human_rate": 0.0486,
+        "automated_accuracy": 0.9573,
+        "end_to_end_accuracy": 0.9594,
+        "errors_per_1k": 40.6396
+      },
+      "mean_latency_ms": 83.1,
+      "llm_prompt_tokens_per_1k_msgs": 2127
+    },
+    "cascade_verify@5%": {
+      "t_auto": 0.4,
+      "t_llm": 0.4,
+      "auto_rate": 0.9588,
+      "llm_rate": 0.0,
+      "human_rate": 0.0412,
+      "automated_accuracy": 0.9502,
+      "end_to_end_accuracy": 0.9523,
+      "errors_per_1k": 47.7273,
+      "errors_per_1k_ci95": [
+        40.6,
+        54.9
+      ],
+      "tuned_on_val": {
+        "t_auto": 0.4,
+        "t_llm": 0.4,
+        "auto_rate": 0.9514,
+        "llm_rate": 0.0,
+        "human_rate": 0.0486,
+        "automated_accuracy": 0.9566,
+        "end_to_end_accuracy": 0.9587,
+        "errors_per_1k": 41.3058
+      },
+      "mean_latency_ms": 28.2,
+      "llm_prompt_tokens_per_1k_msgs": 0
+    },
+    "classifier+human@10%": {
+      "t_auto": 0.56,
+      "t_llm": 0.56,
+      "auto_rate": 0.9006,
+      "llm_rate": 0.0,
+      "human_rate": 0.0994,
+      "automated_accuracy": 0.9686,
+      "end_to_end_accuracy": 0.9718,
+      "errors_per_1k": 28.2468,
+      "errors_per_1k_ci95": [
+        22.7,
+        34.4
+      ],
+      "tuned_on_val": {
+        "t_auto": 0.56,
+        "t_llm": 0.56,
+        "auto_rate": 0.9014,
+        "llm_rate": 0.0,
+        "human_rate": 0.0986,
+        "automated_accuracy": 0.9749,
+        "end_to_end_accuracy": 0.9773,
+        "errors_per_1k": 22.6516
+      },
+      "mean_latency_ms": 28.2,
+      "llm_prompt_tokens_per_1k_msgs": 0
+    },
+    "cascade_rerank@10%": {
+      "t_auto": 0.56,
+      "t_llm": 0.56,
+      "auto_rate": 0.9006,
+      "llm_rate": 0.0,
+      "human_rate": 0.0994,
+      "automated_accuracy": 0.9686,
+      "end_to_end_accuracy": 0.9718,
+      "errors_per_1k": 28.2468,
+      "errors_per_1k_ci95": [
+        22.7,
+        34.4
+      ],
+      "tuned_on_val": {
+        "t_auto": 0.56,
+        "t_llm": 0.56,
+        "auto_rate": 0.9014,
+        "llm_rate": 0.0,
+        "human_rate": 0.0986,
+        "automated_accuracy": 0.9749,
+        "end_to_end_accuracy": 0.9773,
+        "errors_per_1k": 22.6516
+      },
+      "mean_latency_ms": 28.2,
+      "llm_prompt_tokens_per_1k_msgs": 0
+    },
+    "cascade_verify@10%": {
+      "t_auto": 0.56,
+      "t_llm": 0.56,
+      "auto_rate": 0.9006,
+      "llm_rate": 0.0,
+      "human_rate": 0.0994,
+      "automated_accuracy": 0.9686,
+      "end_to_end_accuracy": 0.9718,
+      "errors_per_1k": 28.2468,
+      "errors_per_1k_ci95": [
+        22.7,
+        34.4
+      ],
+      "tuned_on_val": {
+        "t_auto": 0.56,
+        "t_llm": 0.56,
+        "auto_rate": 0.9014,
+        "llm_rate": 0.0,
+        "human_rate": 0.0986,
+        "automated_accuracy": 0.9749,
+        "end_to_end_accuracy": 0.9773,
+        "errors_per_1k": 22.6516
+      },
+      "mean_latency_ms": 28.2,
+      "llm_prompt_tokens_per_1k_msgs": 0
+    }
+  },
+  "top_confusions": [
+    {
+      "gold": "pending transfer",
+      "predicted": "transfer timing",
+      "count": 6
+    },
+    {
+      "gold": "pending transfer",
+      "predicted": "transfer not received by recipient",
+      "count": 5
+    },
+    {
+      "gold": "top up reverted",
+      "predicted": "top up failed",
+      "count": 4
+    },
+    {
+      "gold": "declined transfer",
+      "predicted": "declined card payment",
+      "count": 4
+    },
+    {
+      "gold": "beneficiary not allowed",
+      "predicted": "failed transfer",
+      "count": 4
+    },
+    {
+      "gold": "balance not updated after bank transfer",
+      "predicted": "transfer timing",
+      "count": 4
+    },
+    {
+      "gold": "extra charge on statement",
+      "predicted": "card payment fee charged",
+      "count": 3
+    },
+    {
+      "gold": "fiat currency support",
+      "predicted": "exchange via app",
+      "count": 3
+    }
+  ]
+}

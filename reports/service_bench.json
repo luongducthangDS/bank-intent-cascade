@@ -1,0 +1,13 @@
+{
+  "requests": 500,
+  "p50_ms": 51.1,
+  "p95_ms": 68.0,
+  "p99_ms": 84.2,
+  "throughput_rps_single_worker": 19.2,
+  "human_rate": 0.028,
+  "metrics_endpoint": {
+    "auto": 486,
+    "human": 15,
+    "human_rate": 0.0299
+  }
+}
