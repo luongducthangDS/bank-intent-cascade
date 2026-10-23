@@ -105,3 +105,7 @@ The LLM layer is one class (`cascade/llm.py`). Pointing it at a hosted model is 
 3. What would have to be true (accuracy, latency, price) for the LLM band to be worth switching on?
 4. Why does few-shot with *nearest* examples help much more than intent names alone?
 5. How would you detect drift in production, given you only see confidence, not labels?
+
+## Data and license
+
+Code: MIT ([LICENSE](LICENSE)). Data: [Banking77](https://github.com/PolyAI-LDN/task-specific-datasets) (PolyAI, CC BY 4.0), downloaded at run time.

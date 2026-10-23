@@ -11,9 +11,9 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from cascade.data import load  # noqa: E402
-from cascade.fewshot import ExampleBank  # noqa: E402
-from cascade.llm import MODELS, IntentLLM  # noqa: E402
+from cascade.data import load
+from cascade.fewshot import ExampleBank
+from cascade.llm import MODELS, IntentLLM
 
 ROOT = Path(__file__).resolve().parents[1]
 CAP = 0.50   # the LLM band never reaches above this confidence: LLM cost is bounded by design

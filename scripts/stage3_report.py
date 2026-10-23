@@ -11,11 +11,11 @@ import matplotlib
 import numpy as np
 
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402
+import matplotlib.pyplot as plt
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from cascade.data import load  # noqa: E402
-from cascade.policy import evaluate, search  # noqa: E402
+from cascade.data import load
+from cascade.policy import evaluate, search
 
 ROOT = Path(__file__).resolve().parents[1]
 CAP = 0.50
