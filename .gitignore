@@ -6,3 +6,6 @@ artifacts/
 __pycache__/
 .pytest_cache/
 reports/*.log
+CV/
+*.pdf
+*.tex
