@@ -7,8 +7,8 @@ import numpy as np
 from sklearn.linear_model import LogisticRegression
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from cascade.data import load  # noqa: E402
-from cascade.models import EMBED_MODEL  # noqa: E402
+from cascade.data import load
+from cascade.models import EMBED_MODEL
 
 ROOT = Path(__file__).resolve().parents[1]
 d = load()

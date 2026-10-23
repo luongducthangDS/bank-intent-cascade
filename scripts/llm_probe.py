@@ -5,8 +5,8 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from cascade.data import load  # noqa: E402
-from cascade.llm import MODELS, IntentLLM  # noqa: E402
+from cascade.data import load
+from cascade.llm import MODELS, IntentLLM
 
 ROOT = Path(__file__).resolve().parents[1]
 model = MODELS / sys.argv[1]

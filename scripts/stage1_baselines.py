@@ -1,4 +1,5 @@
 """Stage 1: cheap classifiers on Banking77 test. Writes reports/stage1.json."""
+import itertools
 import json
 import sys
 import time
@@ -8,8 +9,8 @@ import numpy as np
 from sklearn.metrics import accuracy_score, f1_score
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from cascade.data import load  # noqa: E402
-from cascade.models import EmbeddingLR, TfidfLR, timed_single  # noqa: E402
+from cascade.data import load
+from cascade.models import EmbeddingLR, TfidfLR, timed_single
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -18,7 +19,7 @@ def ece(probs, y, bins=15):
     conf, pred = probs.max(1), probs.argmax(1)
     edges = np.linspace(0, 1, bins + 1)
     total = 0.0
-    for lo, hi in zip(edges[:-1], edges[1:]):
+    for lo, hi in itertools.pairwise(edges):
         m = (conf > lo) & (conf <= hi)
         if m.any():
             total += m.mean() * abs((pred[m] == y[m]).mean() - conf[m].mean())
@@ -32,7 +33,7 @@ def main():
     res = {}
     for model in (TfidfLR(), EmbeddingLR()):
         t = time.perf_counter()
-        kw = lambda split: {"cache_key": f"bge_{split}"} if model.name == "embedding_lr" else {}
+        kw = lambda split, m=model: {"cache_key": f"bge_{split}"} if m.name == "embedding_lr" else {}
         model.fit(d.train.texts, d.train.labels, **kw("train"))
         fit_s = time.perf_counter() - t
         for split in ("val", "test"):

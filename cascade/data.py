@@ -3,13 +3,12 @@
 Official split: 10,003 train / 3,080 test. We carve a stratified 15 % validation set out of train;
 every threshold in this project is tuned on validation and reported once on test.
 """
-from dataclasses import dataclass
-
-import numpy as np
 import json
 import urllib.request
+from dataclasses import dataclass
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 

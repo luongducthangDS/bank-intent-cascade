@@ -5,8 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Lint (ruff)
+        run: pipx run --spec ruff==0.17.2 ruff check .
       - uses: actions/setup-python@v5
         with: { python-version: "3.11", cache: pip }
-      - run: pip install numpy scikit-learn fastapi httpx pytest pydantic
+      - run: pip install numpy==2.4.6 scikit-learn==1.9.1 fastapi==0.161.1 httpx==0.28.1 pytest==9.1.1 pydantic==2.14.1
       # policy + API contract tests use a stub model, so CI needs no model weights
       - run: pytest -q

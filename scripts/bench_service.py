@@ -8,8 +8,8 @@ import numpy as np
 from fastapi.testclient import TestClient
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from cascade.data import load  # noqa: E402
-from cascade.service import create_app  # noqa: E402
+from cascade.data import load
+from cascade.service import create_app
 
 ROOT = Path(__file__).resolve().parents[1]
 d = load()
